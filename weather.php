@@ -1,6 +1,5 @@
 <?php
-// Váš API klíč získaný po registraci na OpenWeatherMap
-$apiKey = "ad736282b0ffa235e344ebf4cfae9fd8";
+$apiKey = getenv('apiKey');
 
 // Funkce pro získání dat z API OpenWeatherMap
 function getWeatherData($city, $apiKey) {
