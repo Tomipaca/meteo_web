@@ -1,0 +1,29 @@
+body {
+    font-family: 'Poppins';font-size: 22px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  
+  .container {
+    display:flex;
+    justify-content:center;
+    height: 500px;
+  }
+
+  input {
+    height: 40px;
+    border-radius: 20px;
+  }
+
+  .form {
+    border: 100px;
+  }
+
+  button {
+    border-radius: 15px;
+  }
