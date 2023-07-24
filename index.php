@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +10,14 @@
 </head>
 
 <body>
-    <h1>Aktuální počasí v České republice</h1>
-    <form action="weather.php" method="GET">
-        <label>Zadejte název města v ČR:</label>
-        <input type="text" name="city" required>
-        <input type="submit" value="Zobrazit počasí">
-    </form>
+<h1>Aktuální počasí v České republice</h1>
+    <div class="form-container">
+        <form action="weather.php" method="GET" class="form">
+            <label>Zadejte název města v ČR:</label>
+            <input type="text" name="city" required pattern="[A-Za-zěščřžýáíéúůĚŠČŘŽÝÁÍÉÚŮ ]+">
+            <input type="submit" value="Zobrazit počasí">
+        </form>
+    </div>
 </body>
 
 </html>

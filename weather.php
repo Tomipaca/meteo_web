@@ -3,7 +3,7 @@ $apiKey = getenv('apiKey');
 
 // Funkce pro získání dat z API OpenWeatherMap
 function getWeatherData($city, $apiKey): array {
-    $url = "https://api.openweathermap.org/data/2.5/weather?q=$city,CZ&appid=$apiKey";
+    $url = "https://api.openweathermap.org/data/2.5/weather?q=$city,lang=cz&CZ&appid=$apiKey";
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -21,7 +21,7 @@ function kelvinToCelsius($kelvin): float {
 
 // Zpracování uživatelského vstupu (město)
 if (isset($_GET['city'])) {
-    $city = urlencode($_GET['city']);
+    $city = urldecode($_GET['city']);
     $weatherData = getWeatherData($city, $apiKey);
 
     if ($weatherData) {
