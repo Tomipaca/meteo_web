@@ -14,7 +14,7 @@
     <div class="form-container">
         <form action="weather.php" method="GET" class="form">
             <label>Zadejte název města v ČR:</label>
-            <input type="text" name="city" required pattern="[A-Za-zěščřžýáíéúůĚŠČŘŽÝÁÍÉÚŮ ]+">
+            <input type="text" name="city" required pattern="[A-Za-zěščřžýáíéúůĚŠČŘŽÝÁÍÉÚŮ ]+" placeholder="Město">
             <input type="submit" value="Zobrazit počasí">
         </form>
     </div>
