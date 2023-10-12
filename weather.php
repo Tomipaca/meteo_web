@@ -1,5 +1,5 @@
 <?php
-$apiKey = getenv('apiKey');
+$apiKey = $apiKey;
 
 // Funkce pro získání dat z API OpenWeatherMap
 function getWeatherData($city, $apiKey): array {
