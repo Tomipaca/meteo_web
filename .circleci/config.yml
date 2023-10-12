@@ -6,6 +6,12 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Composer
+          command: |
+            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+            php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+            php -r "unlink('composer-setup.php');"
+      - run:
           name: Install Dependencies
           command: composer install
       - run:
