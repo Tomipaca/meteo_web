@@ -16,5 +16,5 @@ jobs:
           command: composer install
       - run:
           name: Run PHPUnit Tests
-          command: vendor/bin/phpunit --configuration C:\xampp\htdocs\meteo_web\phpunit.xml
+          command: vendor/bin/phpunit --configuration phpunit.xml
 
